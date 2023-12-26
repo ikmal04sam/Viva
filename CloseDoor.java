@@ -11,7 +11,7 @@ package viva3last;
 public class CloseDoor extends Equipment{
 
     private String name = "CloseDoor";
-    public int use = 10;
+    public static int use = 10;
 
     public String getname() {
         return name;

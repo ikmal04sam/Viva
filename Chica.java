@@ -13,7 +13,7 @@ public class Chica extends Monster{
     
     @Override
     public void useUniqueAbility(){
-        System.out.println(toString() + "can be blocked by flashlight and close door."); 
+        System.out.println("\n" +toString() + " can be blocked by flashlight and close door."); 
     }
     
     @Override

@@ -21,9 +21,9 @@ public class Character {
     public void equipmentList() {
         if (equipmentList != null) {
             for (Equipment equipment : equipmentList) {
-                if (equipment instanceof Flashlight) {
+                if (equipment == equipmentList[0]) {
                     System.out.println("Flashlight: Remaining Battery - " + ((Flashlight) equipment).battery());
-                } else if (equipment instanceof CloseDoor) {
+                } else if (equipment == equipmentList[1]) {
                     System.out.println("Close Door: Remaining Uses - " + ((CloseDoor) equipment).use());
                 }
             }

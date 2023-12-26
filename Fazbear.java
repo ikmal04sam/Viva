@@ -13,7 +13,7 @@ public class Fazbear extends Monster{
     
     @Override
     public void useUniqueAbility(){
-        System.out.println(toString() + "can be blocked by flashlight or close door.");   
+        System.out.println(toString() + " can be blocked by flashlight or close door.");   
     }
     
     @Override

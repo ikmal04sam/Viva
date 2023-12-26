@@ -8,21 +8,22 @@ package viva3last;
  *
  * @author ikmal
  */
-public class Foxy extends Monster{
+public class Foxy extends Monster {
+
     int batteryReducetion = 6;
-    
+
     @Override
-    public void useUniqueAbility(){
-        System.out.println(toString() + "can be blocked by close door only."); 
+    public void useUniqueAbility() {
+        System.out.println(toString() + " can be blocked by close door only.");
     }
-    
+
     @Override
-    public int getBatteryReduction(){
+    public int getBatteryReduction() {
         Flashlight.batterylife -= batteryReducetion;
-        return Flashlight.batterylife; 
+        return Flashlight.batterylife;
     }
-    
-    public String toString(){
+
+    public String toString() {
         return "Foxy";
     }
 }

@@ -11,21 +11,22 @@ import java.util.Random;
  * @author ikmal
  */
 public class FreddyHouse {
+
     Random rd = new Random();
-    
-    public Monster[] createMonsters(int n){
+
+    public Monster[] createMonsters(int n) {
         Monster[] monsters = new Monster[n];
-        for(int i = 0; i < monsters.length;i++){
-        monsters[i] = randomMonster();
-            
+        for (int i = 0; i < monsters.length; i++) {
+            monsters[i] = randomMonster();
+
         }
         return monsters;
     }
-    
-    public Monster randomMonster(){
+
+    public Monster randomMonster() {
         int randomNum = rd.nextInt(4);
-        
-        switch(randomNum){
+
+        switch (randomNum) {
             case 0:
                 return new Fazbear();
             case 1:
@@ -38,13 +39,20 @@ public class FreddyHouse {
                 return new Fazbear();
         }
     }
-    
-    public void printMonsterAndAbilities(){
-        Monster[] monsters = createMonsters();
-        for (Monster monster : monsters) {
-            System.out.println("\nMonster: " + monster.toString());
-            monster.useUniqueAbility();
-            System.out.println("---------------------------");
-        }
+
+    public void printMonsterAndAbilities() {
+        Chica c = new Chica();
+        Fazbear f = new Fazbear();
+        Bonnie b = new Bonnie();
+        Foxy fox = new Foxy();
+        c.useUniqueAbility();
+        System.out.println("---------------------------");
+        f.useUniqueAbility();
+        System.out.println("---------------------------");
+        b.useUniqueAbility();
+        System.out.println("---------------------------");
+        fox.useUniqueAbility();
+        System.out.println("---------------------------");
+
     }
 }
