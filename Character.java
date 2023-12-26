@@ -37,7 +37,6 @@ public class Character {
         if ("Bonnie".equals(m)) {
             int currentBattery = monster.getBatteryReduction();
             if (currentBattery > 0) {
-                //((Flashlight) equipment).reduceBattery(batteryReduction); // Reduce battery
                 return true; // Equipment used successfully
             }
         } else if ("Foxy".equals(m)) {
@@ -52,9 +51,13 @@ public class Character {
                 return true; // Equipment used successfully
             }
         } else if ("Fazbear".equals(m)) {
-            int currentDoor = monster.getDoorReduction();
+            int currentDoor = monster.getBatteryReduction();
+            int currentBattery = 0;
             if (currentDoor > 0) {
                 return true; // Equipment used successfully
+            } else if (currentBattery > 0) {
+                currentBattery = monster.getBatteryReduction();
+                return true;
             }
         }
         return false; // Equipment couldn't be used

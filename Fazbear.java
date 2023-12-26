@@ -20,13 +20,13 @@ public class Fazbear extends Monster {
 
     @Override
     public int getBatteryReduction() {
-//        Flashlight.batterylife -= batteryReducetion;
-        return batteryReducetion;
+        Flashlight.batterylife -= batteryReducetion;
+        return Flashlight.batterylife;
     }
 
     public int getDoorReduction() {
 //        CloseDoor.use -= doorReduction;
-        return doorReduction;
+        return CloseDoor.use;
     }
 
     public String toString() {

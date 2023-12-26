@@ -20,14 +20,14 @@ public class Chica extends Monster {
 
     @Override
     public int getBatteryReduction() {
-//        Flashlight.batterylife -= batteryReducetion;
-        return batteryReducetion;
+        Flashlight.batterylife -= batteryReducetion;
+        return Flashlight.batterylife;
     }
 
     @Override
     public int getDoorReduction() {
-//        CloseDoor.use -= doorReduction;
-        return doorReduction;
+        CloseDoor.use -= doorReduction;
+        return CloseDoor.use;
     }
 
     public String toString() {

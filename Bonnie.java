@@ -19,8 +19,8 @@ public class Bonnie extends Monster {
 
     @Override
     public int getBatteryReduction() {
-//        Flashlight.batterylife -= batteryReducetion;
-        return batteryReducetion;
+        Flashlight.batterylife -= batteryReducetion;
+        return Flashlight.batterylife;
     }
 
     public String toString() {

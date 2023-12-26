@@ -10,7 +10,7 @@ package viva3last;
  */
 public class Foxy extends Monster {
 
-    int doorReduction = 6;
+    int doorReduction = 1;
 
     @Override
     public void useUniqueAbility() {
