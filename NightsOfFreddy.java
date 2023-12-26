@@ -14,19 +14,20 @@ public class NightsOfFreddy {
         // Create instances of equipment
         Flashlight flashlight = new Flashlight(); // Battery life set to 10 units
         CloseDoor closeDoor = new CloseDoor(); // 5 uses of the door
-
+        
         // Create instances of characters
         Character character = new Character();
-        character.createEquipment(flashlight, closeDoor);
+        Equipment[] eqlist = character.createEquipment(flashlight, closeDoor);
 
-        // Create instance of FreddyHouse to manage monsters
-        FreddyHouse freddyHouse = new FreddyHouse();
-
-        // Simulate encounters between character and monsters
-        System.out.println("Encounters Begin!\n");
-        Monster[] monsters = freddyHouse.createMonsters();
         character.equipmentList(); // Display character's equipment initially
         
+        // Create instance of FreddyHouse to manage monsters
+        FreddyHouse freddyHouse = new FreddyHouse(8);
+        // Simulate encounters between character and monsters
+        Monster[] monsters = freddyHouse.createMonsters();
+        freddyHouse.printMonsterAndAbilities();
+        
+        System.out.println("Encounters Begin!!!\n");
         for (Monster monster : monsters) {
             System.out.println("Character encounters: " + monster.toString());
             monster.useUniqueAbility(); // Describe monster's unique ability

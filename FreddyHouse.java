@@ -13,12 +13,12 @@ import java.util.Random;
 public class FreddyHouse {
     Random rd = new Random();
     
-    public Monster[] createMonsters(){
-        Monster[] monsters = new Monster[4];
-        monsters[0] = randomMonster();
-        monsters[1] = randomMonster();
-        monsters[2] = randomMonster();
-        monsters[3] = randomMonster();
+    public Monster[] createMonsters(int n){
+        Monster[] monsters = new Monster[n];
+        for(int i = 0; i < monsters.length;i++){
+        monsters[i] = randomMonster();
+            
+        }
         return monsters;
     }
     
@@ -42,9 +42,8 @@ public class FreddyHouse {
     public void printMonsterAndAbilities(){
         Monster[] monsters = createMonsters();
         for (Monster monster : monsters) {
-            System.out.println("Monster: " + monster.toString());
+            System.out.println("\nMonster: " + monster.toString());
             monster.useUniqueAbility();
-            System.out.println("Battery Reduction: " + monster.getBatteryReduction());
             System.out.println("---------------------------");
         }
     }
