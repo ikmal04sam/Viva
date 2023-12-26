@@ -9,6 +9,7 @@ package viva3last;
  * @author ikmal
  */
 public class Character {
+
     private Equipment[] equipmentList;
 
     public Equipment[] createEquipment(Flashlight f, CloseDoor c) {
@@ -32,24 +33,30 @@ public class Character {
         }
     }
 
-    public boolean useEquipment(String equipmentName, Monster monster) {
-        for (Equipment equipment : equipmentList) {
-            if (equipment instanceof Flashlight && equipmentName.equals("Flashlight")) {
-                int batteryReduction = monster.getBatteryReduction();
-                int currentBattery = ((Flashlight) equipment).battery();
-                if (currentBattery >= batteryReduction) {
-                    //((Flashlight) equipment).reduceBattery(batteryReduction); // Reduce battery
-                    return true; // Equipment used successfully
-                }
-            } else if (equipment instanceof CloseDoor && equipmentName.equals("CloseDoor")) {
-                int uses = ((CloseDoor) equipment).use();
-                if (uses > 0) {
-                    ((CloseDoor) equipment).use(); // Use door
-                    return true; // Equipment used successfully
-                }
+    public boolean useEquipment(String m, Monster monster) {
+        if ("Bonnie".equals(m)) {
+            int currentBattery = monster.getBatteryReduction();
+            if (currentBattery > 0) {
+                //((Flashlight) equipment).reduceBattery(batteryReduction); // Reduce battery
+                return true; // Equipment used successfully
+            }
+        } else if ("Foxy".equals(m)) {
+            int currentDoor = monster.getDoorReduction();
+            if (currentDoor > 0) {
+                return true; // Equipment used successfully
+            }
+        } else if ("Chica".equals(m)) {
+            int currentDoor = monster.getDoorReduction();
+            int currentBattery = monster.getBatteryReduction();
+            if (currentDoor > 0 && currentBattery > 0) {
+                return true; // Equipment used successfully
+            }
+        } else if ("Fazbear".equals(m)) {
+            int currentDoor = monster.getDoorReduction();
+            if (currentDoor > 0) {
+                return true; // Equipment used successfully
             }
         }
         return false; // Equipment couldn't be used
     }
-
 }

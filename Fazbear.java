@@ -8,21 +8,28 @@ package viva3last;
  *
  * @author ikmal
  */
-public class Fazbear extends Monster{
+public class Fazbear extends Monster {
+
     int batteryReducetion = 8;
-    
+    int doorReduction = 1;
+
     @Override
-    public void useUniqueAbility(){
-        System.out.println(toString() + " can be blocked by flashlight or close door.");   
+    public void useUniqueAbility() {
+        System.out.println(toString() + " can be blocked by flashlight or close door.");
     }
-    
+
     @Override
-    public int getBatteryReduction(){
-        Flashlight.batterylife -= batteryReducetion;
-        return Flashlight.batterylife; 
+    public int getBatteryReduction() {
+//        Flashlight.batterylife -= batteryReducetion;
+        return batteryReducetion;
     }
-    
-    public String toString(){
+
+    public int getDoorReduction() {
+//        CloseDoor.use -= doorReduction;
+        return doorReduction;
+    }
+
+    public String toString() {
         return "Fazbear";
     }
 }

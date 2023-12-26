@@ -19,4 +19,7 @@ public class Monster {
     public int getBatteryReduction(){
         return 0;
     }
+    public int getDoorReduction(){
+        return 0;
+    }
 }

@@ -10,7 +10,7 @@ package viva3last;
  */
 public class Foxy extends Monster {
 
-    int batteryReducetion = 6;
+    int doorReduction = 6;
 
     @Override
     public void useUniqueAbility() {
@@ -18,9 +18,9 @@ public class Foxy extends Monster {
     }
 
     @Override
-    public int getBatteryReduction() {
-        Flashlight.batterylife -= batteryReducetion;
-        return Flashlight.batterylife;
+    public int getDoorReduction() {
+        CloseDoor.use -= doorReduction;
+        return CloseDoor.use;
     }
 
     public String toString() {

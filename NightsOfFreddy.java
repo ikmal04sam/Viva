@@ -30,7 +30,7 @@ public class NightsOfFreddy {
         System.out.println("Encounters Begin!!!\n");
         for (Monster monster : monsters) {
             System.out.println("Character encounters: " + monster.toString());
-            boolean equipmentUsed = character.useEquipment("Flashlight", monster);
+            boolean equipmentUsed = character.useEquipment(monster.toString(),monster);
             if (equipmentUsed) {
                 System.out.println("Character used equipment successfully!");
             } else {
