@@ -52,7 +52,4 @@ public class Character {
         return false; // Equipment couldn't be used
     }
 
-    void createEquipment() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

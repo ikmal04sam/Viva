@@ -26,7 +26,7 @@ public class NightsOfFreddy {
         System.out.println("Encounters Begin!\n");
         Monster[] monsters = freddyHouse.createMonsters();
         character.equipmentList(); // Display character's equipment initially
-
+        
         for (Monster monster : monsters) {
             System.out.println("Character encounters: " + monster.toString());
             monster.useUniqueAbility(); // Describe monster's unique ability
