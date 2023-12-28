@@ -26,7 +26,7 @@ public class NightsOfFreddy {
         // Create instance of FreddyHouse to manage monsters
         FreddyHouse freddyHouse = new FreddyHouse();
         // Simulate encounters between character and monsters
-        Monster[] monsters = freddyHouse.createMonsters(15);
+        Monster[] monsters = freddyHouse.createMonsters(20);
         freddyHouse.printMonsterAndAbilities();
 
         System.out.println("Encounters Begin!!!\n");
