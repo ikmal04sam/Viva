@@ -37,16 +37,18 @@ public class NightsOfFreddy {
                 System.out.println("Character used equipment successfully!");
             } else {
                 System.out.println("Character couldn't use equipment.");
+                break;
             }
             character.equipmentList(); // Display updated equipment status
             System.out.println("---------------------------");
         }
+
         if (eqList[0].battery() > 0 && eqList[1].use() > 0) {
             System.out.println("\nCongrats !! You survive the night!!");
-        }else{
+        } else {
             System.out.println("\nYOU DIE!!!");
         }
-        
+
     }
 
 }
