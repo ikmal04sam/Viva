@@ -4,6 +4,8 @@
  */
 package viva3last;
 
+import java.util.Arrays;
+
 /**
  *
  * @author ikmal
@@ -17,14 +19,14 @@ public class NightsOfFreddy {
 
         // Create instances of characters
         Character character = new Character();
-        Equipment[] eqlist = character.createEquipment(flashlight, closeDoor);
+        Equipment[] eqList = character.createEquipment(flashlight, closeDoor);
 
         character.equipmentList(); // Display character's equipment initially
 
         // Create instance of FreddyHouse to manage monsters
         FreddyHouse freddyHouse = new FreddyHouse();
         // Simulate encounters between character and monsters
-        Monster[] monsters = freddyHouse.createMonsters(10);
+        Monster[] monsters = freddyHouse.createMonsters(15);
         freddyHouse.printMonsterAndAbilities();
 
         System.out.println("Encounters Begin!!!\n");
@@ -39,6 +41,12 @@ public class NightsOfFreddy {
             character.equipmentList(); // Display updated equipment status
             System.out.println("---------------------------");
         }
-
+        if (eqList[0].battery() > 0 && eqList[1].use() > 0) {
+            System.out.println("\nCongrats !! You survive the night!!");
+        }else{
+            System.out.println("\nYOU DIE!!!");
+        }
+        
     }
+
 }

@@ -10,7 +10,7 @@ package viva3last;
  */
 public class Character {
 
-    private Equipment[] equipmentList;
+    public Equipment[] equipmentList;
 
     public Equipment[] createEquipment(Flashlight f, CloseDoor c) {
         equipmentList = new Equipment[2]; // Assuming 2 slots for equipment (flashlight and door)

@@ -25,4 +25,11 @@ public class Equipment {
         System.out.println(f.getname() + ": " + f.battery());
         System.out.println(c.getname() + ": " + c.use()); 
     }
+    
+    public int battery(){
+        return f.battery();
+    }
+    public int use(){
+        return c.use();
+    }
 }
